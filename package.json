@@ -1,0 +1,19 @@
+{
+  "name": "49er-rideshare",
+  "version": "1.0.0",
+  "description": "A rideshare application for UNCC Students. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbstiane46/49er-rideshare.git"
+  },
+  "author": "Sebastian, Wilson, Anitra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbstiane46/49er-rideshare/issues"
+  },
+  "homepage": "https://github.com/sbstiane46/49er-rideshare#readme"
+}
