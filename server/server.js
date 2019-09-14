@@ -11,7 +11,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../config/config.js');
 const webpackConfig = require('../webpack.config');
 
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = process.env.MONGODB_URI !== 'production';
 const port  = process.env.PORT || 8080;
 
 
@@ -19,8 +19,8 @@ const port  = process.env.PORT || 8080;
 // ================================================================================================
 
 // Set up Mongoose
-// mongoose.connect(isDev ? config.db_dev : config.db);
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/49er-rideshare');
+mongoose.connect(isDev ? config.db_dev : config.db);
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/49er-rideshare');
 mongoose.Promise = global.Promise;
 
 
