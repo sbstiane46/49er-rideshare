@@ -7,6 +7,9 @@ import {
   setInStorage
 } from '../../utils/storage';
 
+import GoogleApiWrapper from '../GoogleApiWrapper/GoogleApiWrapper';
+import Toolbar from '../Toolbar/Toolbar';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -196,36 +199,36 @@ class Home extends Component {
   }
 
   logout() {
-this.setState({
-  isLoading: true,
-});
-
-    const obj = getFromStorage('the_main_app');
-    if (obj && obj.token) {
-      const { token } = obj;
-      //verify the token
-      fetch('/api/account/logout?token=' + token)
-        .then(res => res.json())
-        .then(json => {
-          if (json.success) {
-            this.setState({
-              token: '',
-              isLoading: false
+    this.setState({
+      isLoading: true,
+    });
+    
+        const obj = getFromStorage('the_main_app');
+        if (obj && obj.token) {
+          const { token } = obj;
+          //verify the token
+          fetch('/api/account/logout?token=' + token)
+            .then(res => res.json())
+            .then(json => {
+              if (json.success) {
+                this.setState({
+                  token: '',
+                  isLoading: false
+                });
+              } else {
+                this.setState({
+                  isLoading: false,
+    
+                });
+              }
             });
-          } else {
-            this.setState({
-              isLoading: false,
-
-            });
-          }
-        });
-    } else {
-      //There's no token
-      this.setState({
-        isLoading: false
-      });
-    }
-  }
+        } else {
+          //There's no token
+          this.setState({
+            isLoading: false
+          });
+        }
+      }
 
 
 
@@ -340,8 +343,10 @@ this.setState({
 
     return ( 
       <div>
-        <p> Logged into Dashboard! </p>
-        <button onClick = {this.logout}>Log Out</button> 
+        {/* <p> Logged into Dashboard! </p> */}
+        <Toolbar />
+        <button onClick = {this.logout}>Log Out</button>
+        <GoogleApiWrapper />
       </div>
     );
   }
