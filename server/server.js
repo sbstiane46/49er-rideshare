@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config()
 const fs = require('fs');
 const historyApiFallback = require('connect-history-api-fallback');
 const mongoose = require('mongoose');
@@ -18,8 +19,13 @@ const port  = process.env.PORT || 8080;
 // ================================================================================================
 
 // Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db);
+// mongoose.connect(isDev ? config.db_dev : config.db);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/49er-rideshare');
 mongoose.Promise = global.Promise;
+
+
+
+mongoose.connect(process.env.MONGODB_URI || '');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
