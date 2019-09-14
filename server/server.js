@@ -18,14 +18,14 @@ const port  = process.env.PORT || 8080;
 // Configuration
 // ================================================================================================
 
-// Set up Mongoose
+// // Set up Mongoose
 mongoose.connect(isDev ? config.db_dev : config.db);
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/49er-rideshare');
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/heroku_0wd72hp8');
 mongoose.Promise = global.Promise;
 
 
 
-mongoose.connect(process.env.MONGODB_URI || '');
+// mongoose.connect(process.env.MONGODB_URI || '');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
