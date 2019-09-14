@@ -53,5 +53,8 @@
   "bugs": {
     "url": "https://github.com/sbstiane46/49er-rideshare/issues"
   },
-  "homepage": "https://github.com/sbstiane46/49er-rideshare#readme"
+  "homepage": "https://github.com/sbstiane46/49er-rideshare#readme",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
 }
