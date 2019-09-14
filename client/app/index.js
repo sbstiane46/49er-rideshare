@@ -13,6 +13,7 @@ import NotFound from './components/App/NotFound';
 
 import Home from './components/Home/Home';
 
+
 import FirstPage from './components/FirstPage/FirstPage';
 
 import './styles/styles.scss';
