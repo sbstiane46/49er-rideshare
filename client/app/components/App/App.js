@@ -7,7 +7,7 @@ const App = ({ children }) => (
   <>
     
 
-    <main>
+    <main style={{marginTop: '63px'}}>
       {children}
     </main>
 
