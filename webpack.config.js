@@ -1,4 +1,4 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 switch (process.env.NODE_ENV) {
   case 'prod':
@@ -13,8 +13,4 @@ switch (process.env.NODE_ENV) {
     module.exports = require('./config/webpack.dev');
 }
 
-module.exports = {
-  optimization: {
-    minimizer: [new UglifyJsPlugin()],
-  },
-};
+
