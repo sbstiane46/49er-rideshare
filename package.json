@@ -43,6 +43,7 @@
     "react-router-dom": "^4.2.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-middleware": "^3.0.1",
@@ -54,7 +55,5 @@
     "url": "https://github.com/sbstiane46/49er-rideshare/issues"
   },
   "homepage": "https://github.com/sbstiane46/49er-rideshare#readme",
-  "devDependencies": {
-    "uglifyjs-webpack-plugin": "^2.2.0"
-  }
+  "devDependencies": {}
 }

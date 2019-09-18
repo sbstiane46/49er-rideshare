@@ -11,6 +11,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../config/config.js');
 const webpackConfig = require('../webpack.config');
 
+
 const isDev = process.env.MONGODB_URI !== 'production';
 const port  = process.env.PORT || 8080;
 
@@ -19,8 +20,8 @@ const port  = process.env.PORT || 8080;
 // ================================================================================================
 
 // // Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db);
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/heroku_0wd72hp8');
+mongoose.connect(isDev ? config.db_dev : config.db, {useNewUrlParser: true});
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/login');
 mongoose.Promise = global.Promise;
 
 

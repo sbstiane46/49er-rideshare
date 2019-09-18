@@ -249,8 +249,7 @@ class Home extends Component {
 
   render() {
 
-    // ToolBar/SideDrawer
-    let sideDrawer;
+    // Backdrop
     let backdrop;
 
     // Sign up/in
@@ -267,9 +266,8 @@ class Home extends Component {
       signUpPassword
     } = this.state;
 
-    // ToolBar/SideDrawer
+    //Backdrop
     if(this.state.sideDrawerOpen) {
-      sideDrawer= <SideDrawer />;
       backdrop= <Backdrop click={this.backdropClickHandler} />;
     }
     
@@ -374,9 +372,8 @@ class Home extends Component {
         {/* <p> Logged into Dashboard! </p> */}
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} logoutClickHandler={this.logout}/>
         <GoogleApiWrapper />
-        {sideDrawer}
+        <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        
       </div>
     );
   }

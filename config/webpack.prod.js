@@ -12,15 +12,17 @@ module.exports = merge(commonConfig, {
     filename: 'js/[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
   },
-
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
+        uglifyOptions: {
           warnings: false,
-        },
-      }),
-    ],
-  },
+          ie8: false,
+          output: {
+            comments: false
+          }
+        }
+      })
+    ]
+  }
 });
