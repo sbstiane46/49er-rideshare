@@ -22,7 +22,7 @@ const port  = process.env.PORT || 8080;
 // // Set up Mongoose
 mongoose.connect(isDev ? config.db_dev : config.db, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/login');
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 
 
 
