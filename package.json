@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start",
+    "start": "node server",
     "start:dev": "node server"
   },
   "repository": {
@@ -54,5 +54,7 @@
     "url": "https://github.com/sbstiane46/49er-rideshare/issues"
   },
   "homepage": "https://github.com/sbstiane46/49er-rideshare#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
 }
