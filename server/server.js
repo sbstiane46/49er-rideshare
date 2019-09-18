@@ -71,7 +71,7 @@ if (isDev) {
   });
 }
 
-app.listen(port, 'localhost', (err) => {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   }
