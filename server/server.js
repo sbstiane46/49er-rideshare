@@ -20,7 +20,7 @@ const port  = process.env.PORT || 8080;
 // ================================================================================================
 
 // // Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db);
+mongoose.connect(isDev ? config.db_dev : config.db, {useNewUrlParser: true});
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/login');
 mongoose.Promise = global.Promise;
 
