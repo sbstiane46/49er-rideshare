@@ -122,7 +122,7 @@ class Home extends Component {
     } = this.state;
 
     this.setState({
-      isLoading: false,
+      isLoading: true,
     });
 
     //POST request to backend
@@ -167,7 +167,7 @@ class Home extends Component {
     } = this.state;
 
     this.setState({
-      isLoading: false,
+      isLoading: true,
     });
 
     //POST request to backend
