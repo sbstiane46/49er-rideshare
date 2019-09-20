@@ -1,5 +1,6 @@
 import React from 'react';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import LogoutButton from '../Logout/LogoutButton';
 import './Toolbar.scss';
 
 
@@ -7,7 +8,7 @@ const Toolbar = props => (
     <header className="toolbar">
         <nav className="toolbar_navigation">
             <div>
-                <DrawerToggleButton />
+                <DrawerToggleButton click={props.drawerClickHandler}/>
             </div>
             <div className="toolbar_logo"><a href="/">49er Rideshare Logo</a></div>
             <div className="spacer" />
@@ -15,7 +16,7 @@ const Toolbar = props => (
                 <ul>
                     <li><a href="#">User Profile</a></li>
                     <li><a href="#">Dashboard</a></li>
-                    
+                    <li><LogoutButton click={props.logoutClickHandler}/></li>
                 </ul>
             </div>
         </nav>

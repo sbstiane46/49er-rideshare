@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config()
 const fs = require('fs');
 const historyApiFallback = require('connect-history-api-fallback');
 const mongoose = require('mongoose');
@@ -6,20 +7,26 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-
+ 
 const config = require('../config/config.js');
 const webpackConfig = require('../webpack.config');
 
-const isDev = process.env.NODE_ENV !== 'production';
+
+const isDev = process.env.MONGODB_URI !== 'production';
 const port  = process.env.PORT || 8080;
 
 
 // Configuration
 // ================================================================================================
 
-// Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db);
-mongoose.Promise = global.Promise;
+// // Set up Mongoose
+// mongoose.connect(isDev ? config.db_dev : config.db, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/login',{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
+// mongoose.Promise = global.Promise;
+
+
+
+// mongoose.connect(process.env.MONGODB_URI || '');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -64,7 +71,7 @@ if (isDev) {
   });
 }
 
-app.listen(port, 'localhost', (err) => {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   }

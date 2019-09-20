@@ -9,6 +9,8 @@ import {
 
 import GoogleApiWrapper from '../GoogleApiWrapper/GoogleApiWrapper';
 import Toolbar from '../Toolbar/Toolbar';
+import SideDrawer from '../SideDrawer/SideDrawer';
+import Backdrop from '../Backdrop/Backdrop';
 
 class Home extends Component {
   constructor(props) {
@@ -24,7 +26,8 @@ class Home extends Component {
       signUpFirstName: '',
       signUpStudentID: '',
       signUpEmail: '',
-      signUpPassword: ''
+      signUpPassword: '',
+      sideDrawerOpen: false
     };
 
     //bind onChange functions to react component
@@ -38,6 +41,8 @@ class Home extends Component {
     //bind onClick functions to react component
     this.onSignIn = this.onSignIn.bind(this);
     this.onSignUp = this.onSignUp.bind(this);
+    this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
+    this.backdropClickHandler = this.backdropClickHandler.bind(this);
     this.logout = this.logout.bind(this);
   }
 
@@ -230,9 +235,24 @@ class Home extends Component {
         }
       }
 
+  drawerToggleClickHandler() {
+    this.setState((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen}
+    });
+  };
+
+  backdropClickHandler() {
+    this.setState({sideDrawerOpen: false});
+  };
+
 
 
   render() {
+
+    // Backdrop
+    let backdrop;
+
+    // Sign up/in
     const {
       isLoading,
       token,
@@ -246,6 +266,12 @@ class Home extends Component {
       signUpPassword
     } = this.state;
 
+    //Backdrop
+    if(this.state.sideDrawerOpen) {
+      backdrop= <Backdrop click={this.backdropClickHandler} />;
+    }
+    
+    // Sign up/in
     if (isLoading) {
       return ( <div> <p> Loading... </p></div> );
     }
@@ -342,11 +368,12 @@ class Home extends Component {
     }
 
     return ( 
-      <div>
+      <div style={{height: '100%'}}>
         {/* <p> Logged into Dashboard! </p> */}
-        <Toolbar />
-        <button onClick = {this.logout}>Log Out</button>
+        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} logoutClickHandler={this.logout}/>
         <GoogleApiWrapper />
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {backdrop}
       </div>
     );
   }
