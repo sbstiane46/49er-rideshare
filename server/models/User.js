@@ -6,6 +6,17 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  lastName: {
+    type: String,
+    default: ''
+  },
+  userAddress: {
+    type: String,
+    default: ''
+  },
+  userPhoneNumber: {
+    type: String,
+  },
   studentID: {
     type: String,
     default: ''
