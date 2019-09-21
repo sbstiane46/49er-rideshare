@@ -1,6 +1,6 @@
 .side-drawer {
     height: 100%;
-    background-color: white;
+    background-color: black;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     top:0;
@@ -39,8 +39,8 @@
     color: #B9975B;
 }
 
-@media (min-width: 769px) {
-    .side-drawer {
-        display: none;
-    }
-}
+// @media (min-width: 769px) {
+//     .side-drawer {
+//         display: none;
+//     }
+// }
