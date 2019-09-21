@@ -11,6 +11,7 @@ import GoogleApiWrapper from '../GoogleApiWrapper/GoogleApiWrapper';
 import Toolbar from '../Toolbar/Toolbar';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
+import './Home.scss';
 
 class Home extends Component {
   constructor(props) {
@@ -24,6 +25,9 @@ class Home extends Component {
       signInEmail: '',
       signInPassword: '',
       signUpFirstName: '',
+      signUpLastName: '',
+      signUpAddress: '',
+      signUpPhoneNumber: '',
       signUpStudentID: '',
       signUpEmail: '',
       signUpPassword: '',
@@ -36,6 +40,9 @@ class Home extends Component {
     this.onTextboxChangeSignUpEmail = this.onTextboxChangeSignUpEmail.bind(this);
     this.onTextboxChangeSignUpPassword = this.onTextboxChangeSignUpPassword.bind(this);
     this.onTextboxChangeSignUpFirstName = this.onTextboxChangeSignUpFirstName.bind(this);
+    this.onTextboxChangeSignUpLastName = this.onTextboxChangeSignUpLastName.bind(this);
+    this.onTextboxChangeSignUpPhoneNumber = this.onTextboxChangeSignUpPhoneNumber.bind(this);
+    this.onTextboxChangeSignUpAddress = this.onTextboxChangeSignUpAddress.bind(this);
     this.onTextboxChangeSignUpStudentID = this.onTextboxChangeSignUpStudentID.bind(this);
 
     //bind onClick functions to react component
@@ -106,6 +113,24 @@ class Home extends Component {
     });
   }
 
+  onTextboxChangeSignUpLastName(event) {
+    this.setState({
+      signUpLastName: event.target.value,
+    });
+  }
+
+  onTextboxChangeSignUpAddress(event) {
+    this.setState({
+      signUpAddress: event.target.value,
+    });
+  }
+
+  onTextboxChangeSignUpPhoneNumber(event) {
+    this.setState({
+      signUpPhoneNumber: event.target.value,
+    });
+  }
+
   onTextboxChangeSignUpStudentID(event) {
     this.setState({
       signUpStudentID: event.target.value,
@@ -116,6 +141,9 @@ class Home extends Component {
     //grab state
     const {
       signUpFirstName,
+      signUpLastName,
+      signUpAddress,
+      signUpPhoneNumber,
       signUpStudentID,
       signUpEmail,
       signUpPassword
@@ -133,6 +161,9 @@ class Home extends Component {
         },
         body: JSON.stringify({
           firstName: signUpFirstName,
+          lastName: signUpLastName,
+          address: signUpAddress,
+          phoneNumber: signUpPhoneNumber,
           studentID: signUpStudentID,
           email: signUpEmail,
           password: signUpPassword
@@ -146,6 +177,9 @@ class Home extends Component {
             signUpEmail: '',
             signUpPassword: '',
             signUpFirstName: '',
+            signUpLastName: '',
+            signUpPhoneNumber: '',
+            signUpAddress: '',
             signUpStudentID: ''
           });
         } else {
@@ -249,8 +283,10 @@ class Home extends Component {
 
   render() {
 
-    // Backdrop
+    //Backdrop 
     let backdrop;
+
+
 
     // Sign up/in
     const {
@@ -261,6 +297,9 @@ class Home extends Component {
       signInEmail,
       signInPassword,
       signUpFirstName,
+      signUpLastName,
+      signUpAddress,
+      signUpPhoneNumber,
       signUpStudentID,
       signUpEmail,
       signUpPassword
@@ -279,14 +318,14 @@ class Home extends Component {
     if (!token) {
       return ( 
       <div>
-        <div> 
+        <div className='signin'> 
           {
             (sigInError) ? ( 
               <p> {signInError}</p>
             ) : (null)
           }
 
-        <p> Sign In </p> 
+        <p> Member Login </p> 
         <input 
           type = "email"
           placeholder = "Email"
@@ -311,10 +350,12 @@ class Home extends Component {
 
         <button onClick = {this.onSignIn} > Sign In </button> 
       </div> 
+
+
         <br />
         <br />
         
-        <div > 
+        <div className='signup'> 
           {
           (signUpError) ? (
             <p> {signUpError} </p>
@@ -328,6 +369,36 @@ class Home extends Component {
         value = {signUpFirstName}
         onChange = {
           this.onTextboxChangeSignUpFirstName
+        }
+        /> 
+        <br />
+
+        <input
+         type = "text"
+        placeholder = "Last Name"
+        value = {signUpLastName}
+        onChange = {
+          this.onTextboxChangeSignUpLastName
+        }
+        /> 
+        <br />
+
+        <input
+         type = "text"
+        placeholder = "Address"
+        value = {signUpAddress}
+        onChange = {
+          this.onTextboxChangeSignUpAddress
+        }
+        /> 
+        <br />
+
+        <input
+         type = "text"
+        placeholder = "Phone Number"
+        value = {signUpPhoneNumber}
+        onChange = {
+          this.onTextboxChangeSignUpPhoneNumber
         }
         /> 
         <br />
