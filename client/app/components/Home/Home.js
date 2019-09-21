@@ -11,6 +11,7 @@ import GoogleApiWrapper from '../GoogleApiWrapper/GoogleApiWrapper';
 import Toolbar from '../Toolbar/Toolbar';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
+import './Home.scss';
 
 class Home extends Component {
   constructor(props) {
@@ -249,8 +250,10 @@ class Home extends Component {
 
   render() {
 
-    // Backdrop
+    //Backdrop 
     let backdrop;
+
+
 
     // Sign up/in
     const {
@@ -279,14 +282,14 @@ class Home extends Component {
     if (!token) {
       return ( 
       <div>
-        <div> 
+        <div className='signin'> 
           {
             (sigInError) ? ( 
               <p> {signInError}</p>
             ) : (null)
           }
 
-        <p> Sign In </p> 
+        <p> Member Login </p> 
         <input 
           type = "email"
           placeholder = "Email"
@@ -311,10 +314,12 @@ class Home extends Component {
 
         <button onClick = {this.onSignIn} > Sign In </button> 
       </div> 
+
+
         <br />
         <br />
         
-        <div > 
+        <div className='signup'> 
           {
           (signUpError) ? (
             <p> {signUpError} </p>

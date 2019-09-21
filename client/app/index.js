@@ -14,7 +14,7 @@ import NotFound from './components/App/NotFound';
 import Home from './components/Home/Home';
 
 
-import FirstPage from './components/FirstPage/FirstPage';
+// import FirstPage from './components/FirstPage/FirstPage';
 
 import './styles/styles.scss';
 
@@ -23,9 +23,11 @@ render((
     <App>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/firstpage" component={FirstPage}/>
+        {/* <Route path="/firstpage" component={FirstPage}/> */}
         <Route component={NotFound}/>
       </Switch>
     </App>
   </Router>
 ), document.getElementById('app'));
+
+

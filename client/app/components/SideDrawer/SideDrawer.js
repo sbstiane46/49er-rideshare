@@ -6,13 +6,15 @@ const sideDrawer = props => {
     if(props.show) {
         drawerClasses='side-drawer open';
     }
-    return (<nav className={drawerClasses}>
+    return (
+    <nav className={drawerClasses}>
         <ul>
-            <li><a href="#">Feature 1</a></li>
-            <li><a href="#">Feature 2</a></li>
-            <li><a href="#">Feature 3</a></li>
+            <li><a href="#">Where to?</a></li>
+            <li><a href="#">Find Driver</a></li>
+            <li><a href="#">User Profile</a></li>
         </ul>
-    </nav>)
+    </nav>
+    );
 };
 
 export default sideDrawer;
