@@ -318,13 +318,11 @@ class Home extends Component {
     if (!token) {
       return ( 
       <div className='base-container'>
-        <div className='header'>
-          <h1>49er Rideshare</h1>
-          <p>REMINDER: Finish Styling</p>
-        </div>
-        <div className='header'>
-          {/* <img src='https://images.app.goo.gl/7r4mmHr9wVJpr7qo6' /> */}
-        </div>
+      <div className='header'>
+          <img src='https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2018/08/unc_charlotte_logo_colors-279x300.png' />
+          <h1>Rideshare</h1>
+      </div>
+      <div className='form-container'>
         <div className='signin'> 
           {
             (sigInError) ? ( 
@@ -441,6 +439,7 @@ class Home extends Component {
         <button onClick = {this.onSignUp}> Sign Up </button> 
         
       </div>
+    </div>
     </div>
       );
     }
