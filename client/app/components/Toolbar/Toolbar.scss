@@ -16,13 +16,21 @@
 
 .toolbar_logo {
     margin-left: 1rem;
+    display: flex;
 }
 
 .toolbar_logo a {
+    display: flex;
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
 }
+
+.toolbar_logo img {
+    width: 50x;
+    height: 55px;
+}
+
 
 .spacer {
     flex: 1;
