@@ -19,6 +19,9 @@ html {
 body {
   margin: 0;
   height: 100%;
+  background-image: url('https://cdn.pastemagazine.com/www/articles/uber%20safeher.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* HTML5 display definitions

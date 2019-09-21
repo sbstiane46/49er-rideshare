@@ -317,7 +317,14 @@ class Home extends Component {
 
     if (!token) {
       return ( 
-      <div>
+      <div className='base-container'>
+        <div className='header'>
+          <h1>49er Rideshare</h1>
+          <p>REMINDER: Finish Styling</p>
+        </div>
+        <div className='header'>
+          {/* <img src='https://images.app.goo.gl/7r4mmHr9wVJpr7qo6' /> */}
+        </div>
         <div className='signin'> 
           {
             (sigInError) ? ( 
@@ -355,14 +362,14 @@ class Home extends Component {
         <br />
         <br />
         
-        <div className='signup'> 
+        <div className='register'> 
           {
           (signUpError) ? (
             <p> {signUpError} </p>
           ) : (null)
         }
 
-        <p > Sign Up </p>
+        <p > Register </p>
         <input
          type = "text"
         placeholder = "First Name"
