@@ -313,9 +313,10 @@ class Home extends Component {
     
     // Sign up/in
     if (isLoading) {
-      return ( <div> 
-        <iframe src="https://giphy.com/embed/xTkcEQACH24SMPxIQg" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen>
-          </iframe>
+      return ( <div className='loading'> 
+          <iframe src="https://giphy.com/embed/10kTz4r3ishQwU" width="480" height="480" 
+          frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
         </div> );
     }
 

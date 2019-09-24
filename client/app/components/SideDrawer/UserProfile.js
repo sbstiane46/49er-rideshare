@@ -3,6 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import {
     getFromStorage
 } from '../../utils/storage';
+import './UserProfile.scss';
 
 const isEmpty = (value) => value ? value : '-';
 
@@ -19,7 +20,7 @@ export const UserProfile = props => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>User Profile</Modal.Title>
+                    <Modal.Title>Passenger {isEmpty(mainAppStorage.user.firstName)}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <ul>
