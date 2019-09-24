@@ -1,0 +1,158 @@
+[
+    {
+        "BuildingName": "Center City Building",
+        "BuildingAddress": "320 East 9th ST, Charlotte NC 28202",
+        "lat":35.228352,
+        "lng":-80.835182
+    },
+    {
+        "BuildingName": "Atkins Library",
+        "BuildingAddress": "410 Library LN, Charlotte NC 28223",
+        "lat":35.305851,
+        "lng":-80.732071
+    },
+    {
+        "BuildingName": "Colvard",
+        "BuildingAddress": "9105 University RD, Charlotte NC 28223",
+        "lat":35.268170,
+        "lng":-80.893610
+    },
+    {
+        "BuildingName": "Rowe",
+        "BuildingAddress": "9119 University RD, Charlotte NC 28223",
+        "lat":35.268169,
+        "lng":-80.893608
+    },
+    {
+        "BuildingName": "Robinson Hall",
+        "BuildingAddress": "9027 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.303810,
+        "lng":-80.729980
+    },
+    {
+        "BuildingName": "Johnson Band Center",
+        "BuildingAddress": "9114 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.309750,
+        "lng":-80.729330
+    },
+    {
+        "BuildingName": "Storrs",
+        "BuildingAddress": "9115 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.304590,
+        "lng":-80.729130
+    },
+    {
+        "BuildingName": "Denny",
+        "BuildingAddress": "9125 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.305410,
+        "lng":-80.729810
+    },
+    {
+        "BuildingName": "Fretwell",
+        "BuildingAddress": "9203 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.306190,
+        "lng":-80.728970
+    },
+    {
+        "BuildingName": "Friday",
+        "BuildingAddress": "9209 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.306493,
+        "lng":-80.729005
+    },
+    {
+        "BuildingName": "McEniry",
+        "BuildingAddress": "9215 Mary Alexander RD, Charlotte NC 28223",
+        "lat":35.306524,
+        "lng":-80.729070
+    },
+    {
+        "BuildingName": "Cameron Hall",
+        "BuildingAddress": "9010 Craver RD, Charlotte NC 28223",
+        "lat":35.308098,
+        "lng":-80.732870
+    },
+    {
+        "BuildingName": "Smith",
+        "BuildingAddress": "319 Library LN, Charlotte NC 28223",
+        "lat":35.306882,
+        "lng":-80.731597
+    },
+    {
+        "BuildingName": "Burson",
+        "BuildingAddress": "9006 Craver RD, Charlotte NC 28223",
+        "lat":35.306882,
+        "lng":-80.731597
+    },
+    {
+        "BuildingName": "College of Health and Human Services",
+        "BuildingAddress": "8844 Craver RD, Charlotte NC 28223",
+        "lat":35.308098,
+        "lng":-80.732872
+    },
+    {
+        "BuildingName": "Cato College of Education",
+        "BuildingAddress": "8838 Craver RD, Charlotte NC 28223",
+        "lat":35.308098,
+        "lng":-80.732870
+    },
+    {
+        "BuildingName": "Woodward Hall",
+        "BuildingAddress": "8812 Craver RD, Charlotte NC 28223",
+        "lat":35.308098,
+        "lng":-80.732870
+    },
+    {
+        "BuildingName": "Belk Gymnasium",
+        "BuildingAddress": "8911 University RD, Charlotte NC 28223",
+        "lat":35.304261,
+        "lng":-80.733681
+    },
+    {
+        "BuildingName": "EPIC",
+        "BuildingAddress": "8700 Phillips RD, Charlotte NC 28223",
+        "lat":35.312128,
+        "lng":-80.740130
+    },
+    {
+        "BuildingName": "Grigg",
+        "BuildingAddress": "9320 Robert D Snyder RD, Charlotte NC 28223",
+        "lat":35.312163,
+        "lng":-80.741938
+    },
+    {
+        "BuildingName": "Duke Centennial Hall",
+        "BuildingAddress": "9330 Robert D Snyder RD, Charlotte NC 28223",
+        "lat":35.312163,
+        "lng":-80.741938
+    },
+    {
+        "BuildingName": "Kulwicki Motorsports Laboratory",
+        "BuildingAddress": "8414 Phillips RD, Charlotte NC 28223",
+        "lat":35.309318,
+        "lng":-80.739580
+    },
+    {
+        "BuildingName": "Motorsports Research",
+        "BuildingAddress": "8415 Phillips RD, Charlotte NC 28223",
+        "lat":35.309318,
+        "lng":-80.739580
+    },
+    {
+        "BuildingName": "Bioinformatics",
+        "BuildingAddress": "9331 Robert D Snyder RD, Charlotte NC 28223",
+        "lat":35.312163,
+        "lng":-80.741938
+    },
+    {
+        "BuildingName": "PORTAL",
+        "BuildingAddress": "9319 Robert D Snyder RD, Charlotte NC 28223",
+        "lat":35.312163,
+        "lng":-80.741938
+    },
+    {
+        "BuildingName": "Early College High School",
+        "BuildingAddress": "9000 Robert D Snyder RD, Charlotte NC 28223",
+        "lat":35.312163,
+        "lng":-80.741938
+    },
+]

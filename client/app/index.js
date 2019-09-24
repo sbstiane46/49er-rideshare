@@ -16,6 +16,8 @@ import Home from './components/Home/Home';
 
 // import FirstPage from './components/FirstPage/FirstPage';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './styles/styles.scss';
 
 render((

@@ -37,6 +37,12 @@ module.exports = {
         loader: 'babel-loader'
       },
 
+      // CSS files
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+
       // SCSS files
       {
         test: /\.scss$/,

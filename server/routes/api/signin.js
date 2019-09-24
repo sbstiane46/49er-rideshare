@@ -11,6 +11,8 @@ module.exports = (app) => {
         const { body } = req;
         const {
             firstName,
+            lastName,
+            address,
             studentID,
             password
         } = body;
@@ -44,8 +46,6 @@ module.exports = (app) => {
             });
         }
 
-        console.log('Here');
-
         email = email.toLowerCase();
 
         //Verify if user already exists
@@ -72,6 +72,8 @@ module.exports = (app) => {
 
         newUser.email = email;
         newUser.firstName = firstName;
+        newUser.lastName = lastName;
+        newUser.userAddress = address;
         newUser.studentID = studentID;
         newUser.password = newUser.generateHash(password);
         newUser.save((err, user) => {
@@ -157,7 +159,8 @@ module.exports = (app) => {
                 return res.send({
                     success: true,
                     message: "Valid Sign in",
-                    token: doc._id
+                    token: doc._id,
+                    user    
                 });
             });
 
