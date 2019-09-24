@@ -119,12 +119,18 @@ p {
     .left-image {
       display: none;
     }
-    .form-group {
+    .form {
         width: 100%;
         float: center;
+        overflow: scroll;
     }
     .header {
         width: 100%;
+        margin: 0 auto;
         float: center;
+    }
+    .header img {
+        max-width: 175px;
+        max-height: 150px;
     }
   }

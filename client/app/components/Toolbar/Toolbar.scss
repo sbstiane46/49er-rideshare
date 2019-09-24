@@ -4,7 +4,7 @@
     left: 0;
     width:100%;
     background: #046A38;
-    height: 64px;
+    height: 8%;
 } 
 
 .toolbar_navigation {
@@ -27,8 +27,8 @@
 }
 
 .toolbar_logo img {
-    width: 50x;
-    height: 55px;
+    width: 40px;
+    height: 45px;
 }
 
 
@@ -57,8 +57,13 @@
     color: #B9975B;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .toolbar_navigation-items {
         display: none;
+    }
+    .toolbar_logo {
+        position: fixed;
+        right: 10px;
+        top: 5px;
     }
 }
