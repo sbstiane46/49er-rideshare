@@ -8,13 +8,17 @@ const sideDrawer = props => {
         drawerClasses = 'side-drawer open';
     }
     return (
-        <nav className={drawerClasses}>
-            <ul>
-                <li><a href="#">Where to?</a></li>
-                <li><a href="#">Find Driver</a></li>
-                <li><UserProfile /></li>
-            </ul>
-        </nav>
+    <nav className={drawerClasses}>
+        <ul>
+            <li>
+                <a href="#">Where to?</a>
+            </li>
+            <li>
+                <a href="#">Find Driver</a>
+            </li>
+            <li><UserProfile /></li>
+        </ul>
+    </nav>
     );
 };
 

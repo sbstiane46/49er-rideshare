@@ -13,6 +13,7 @@ import SideDrawer from '../SideDrawer/SideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
 import './Home.scss';
 
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +32,7 @@ class Home extends Component {
       signUpStudentID: '',
       signUpEmail: '',
       signUpPassword: '',
-      sideDrawerOpen: false
+      sideDrawerOpen: false,
     };
 
     //bind onChange functions to react component
@@ -282,7 +283,7 @@ class Home extends Component {
 
 
   render() {
-
+    
     //Backdrop 
     let backdrop;
 
@@ -318,11 +319,14 @@ class Home extends Component {
     if (!token) {
       return ( 
       <div className='base-container'>
+      
+      <div className='left-image'></div>  
+
       <div className='header'>
           <img src='https://mk0teamcolorcodtgc6i.kinstacdn.com/wp-content/uploads/2018/08/unc_charlotte_logo_colors-279x300.png' />
           <h1>Rideshare</h1>
       </div>
-      <div className='form-container'>
+      <div className='form'>
         <div className='signin'> 
           {
             (sigInError) ? ( 
@@ -360,7 +364,7 @@ class Home extends Component {
         <br />
         <br />
         
-        <div className='register'> 
+      <div className='register'> 
           {
           (signUpError) ? (
             <p> {signUpError} </p>
@@ -438,8 +442,9 @@ class Home extends Component {
         <br />
         <button onClick = {this.onSignUp}> Sign Up </button> 
         
+        </div>
+
       </div>
-    </div>
     </div>
       );
     }
@@ -449,7 +454,7 @@ class Home extends Component {
         {/* <p> Logged into Dashboard! </p> */}
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} logoutClickHandler={this.logout}/>
         <GoogleApiWrapper />
-        <SideDrawer show={this.state.sideDrawerOpen} />
+        <SideDrawer show={this.state.sideDrawerOpen} getDriverLocation={this.getDriverLocation}/>
         {backdrop}
       </div>
     );
