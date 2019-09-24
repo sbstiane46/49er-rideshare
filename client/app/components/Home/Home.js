@@ -217,7 +217,7 @@ class Home extends Component {
       }).then(res => res.json())
       .then(json => {
         if (json.success) {
-          setInStorage('the_main_app', { token: json.token });
+          setInStorage('the_main_app', { token: json.token, user: json.user });
           this.setState({
             signInError: json.message,
             isLoading: false,
