@@ -64,6 +64,10 @@
     .toolbar_logo {
         position: fixed;
         right: 10px;
-        top: 5px;
+        top: 0;
+    }
+    .toolbar_logo img {
+        width: 30px;
+        height: 35px;
     }
 }
