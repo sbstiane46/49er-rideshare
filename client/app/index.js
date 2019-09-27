@@ -13,7 +13,6 @@ import NotFound from './components/App/NotFound';
 
 import Home from './components/Home/Home';
 
-
 // import FirstPage from './components/FirstPage/FirstPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
